@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
-import 'views/App.dart';
-import 'views/HomePage.dart';
 import 'views/Welcome.dart';
+
+// pages
+import 'views/pages/HomePage.dart';
+import 'views/pages/TablePage.dart';
+import 'views/pages/ProfilePage.dart';
+
+// Layout
+import 'views/Layout.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,9 +25,7 @@ class MyApp extends StatelessWidget {
       ),
       home: const Welcome(),
       routes: {
-        '/home': (context) => const HomePage(),
-        '/table': (context) => const TablePage(),
-        '/profile': (context) => const ProfilePage(),
+        '/layout': (context) => const Layout(),
       },
     );
   }

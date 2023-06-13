@@ -27,7 +27,7 @@ class Welcome extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                Navigator.pushNamed(context, '/home');
+                Navigator.pushNamed(context, '/layout');
               },
             ),
           ],
