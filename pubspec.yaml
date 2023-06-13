@@ -38,6 +38,7 @@ dependencies:
   dynamic_timeline: ^0.1.2
   flutter_timetable: ^1.1.0
   flutter_launcher_icons: ^0.13.1
+  http: ^1.0.0
 
 dev_dependencies:
   flutter_test:

@@ -4,6 +4,9 @@ import 'pages/HomePage.dart';
 import 'pages/TablePage.dart';
 import 'pages/ProfilePage.dart';
 
+// model
+import '../models/User.dart';
+
 class Layout extends StatefulWidget {
   const Layout({super.key});
 
@@ -15,12 +18,12 @@ class _LayoutState extends State<Layout> {
   // index of selected page
   int _selectedIndex = 0;
 
-  // array of pages
-  final List<Widget> _pages = const [
-    HomePage(),
-    TablePage(),
-    ProfilePage(),
-  ];
+  // user object
+  User user = User(
+      username: 'john_doe',
+      name: 'John Doe',
+      email: 'johndoe@example.com',
+      imageUrl: 'https://avatars.githubusercontent.com/u/59855164?s=96&v=4');
 
   final List<String> _titles = const [
     'Home',
@@ -30,6 +33,13 @@ class _LayoutState extends State<Layout> {
 
   @override
   Widget build(BuildContext context) {
+    // Define your pages here
+    final List<Widget> pages = [
+      const HomePage(),
+      const TablePage(),
+      ProfilePage(profileUser: user)
+    ];
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -39,7 +49,7 @@ class _LayoutState extends State<Layout> {
         backgroundColor: Colors.deepPurple,
       ),
       backgroundColor: Colors.black,
-      body: _pages[_selectedIndex],
+      body: pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.deepPurple,
         // selectedItemColor: Colors.2B3F70
