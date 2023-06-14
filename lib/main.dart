@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'views/Welcome.dart';
 
-// pages
-import 'views/pages/HomePage.dart';
-import 'views/pages/TablePage.dart';
-import 'views/pages/ProfilePage.dart';
-
 // Layout
 import 'views/Layout.dart';
 

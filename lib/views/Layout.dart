@@ -48,7 +48,7 @@ class _LayoutState extends State<Layout> {
         ),
         backgroundColor: Colors.deepPurple,
       ),
-      backgroundColor: Colors.black,
+      backgroundColor: const Color.fromARGB(255, 126, 126, 126),
       body: pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.deepPurple,
