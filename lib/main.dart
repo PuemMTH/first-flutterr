@@ -3,8 +3,14 @@ import 'views/Welcome.dart';
 
 // Layout
 import 'views/Layout.dart';
+import 'views/pages/TablePage/UniqueTable.dart';
 
-void main() {
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+
+void main() async {
+  await Hive.initFlutter();
+  await Hive.openBox('favorites');
   runApp(const MyApp());
 }
 
@@ -21,6 +27,7 @@ class MyApp extends StatelessWidget {
       home: const Welcome(),
       routes: {
         '/layout': (context) => const Layout(),
+        // '/uniqueTable': (context) => const UniqueTable(),
       },
     );
   }

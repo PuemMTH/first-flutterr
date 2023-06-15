@@ -52,7 +52,6 @@ class _LayoutState extends State<Layout> {
       body: pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.deepPurple,
-        // selectedItemColor: Colors.2B3F70
         selectedItemColor: Colors.black87,
         unselectedItemColor: Colors.white.withOpacity(.60),
         currentIndex: _selectedIndex,
